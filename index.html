@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title></title>
+
+	<!-- Code to import desired Roboto font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- My JS Code -->
+	<script src="main.js"></script>
+
+	<!-- Code to import feather icons -->
+	<script src="https://unpkg.com/feather-icons"></script>
+
+	<!-- My stylesheet -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id = "navbar" class = "navbar"> 
+	<!-- Menu Icon -->
+	<a class="navbar-menu-button" onclick="menuOpenClick()">
+		<i data-feather="menu" class="menu-icon unselectable"></i>
+		<script>
+	      feather.replace()
+	    </script> 
+		<!--<img src="img/menu.svg" class = "unselectable"> -->
+	</a>
+	
+	<!-- Home Icon -->
+	<a class = "navbar-home-button" href="#" onclick="navClick()">
+		<i data-feather="home" class="home-icon unselectable"></i>
+		<script>
+	      feather.replace()
+	    </script> 
+	</a>
+
+	<!-- Navigational Buttons -->
+	<ul class = "navbar-container">
+		<li class="navbar-button">
+			<a onclick="navClick()" href="#portfolio">Portfolio</a>
+		</li>
+		<li class="navbar-button">
+			<a onclick="navClick()" href="#about">About Me</a>
+		</li>
+		<li class="navbar-button">
+			<a onclick="navClick()" href="#contact">Contact</a>
+		</li>
+	</ul>
+
+</nav>
+
+<div class = "front-page">
+		<img class = "main-image unselectable" src="img/Background.jpg"> </img>
+
+		<div class = "main-title title-text">
+			Dmitriy <br> &nbsp &nbsp &nbsp &nbsp Prokopchuk
+			<div class="sub-title">
+				Software Engineer <struct class="sub-title coding-animation">_</struct>
+			</div>
+		</div>
+		
+		<!-- <img src="img/chevron-down.svg" class = "chevron"></img> -->
+		<a href="#portfolio" id = "chevron-link">
+			<i data-feather="chevron-down" class="chevron unselectable"></i>
+			<script>
+		      feather.replace()
+		    </script> 
+	    </a>
+	    
+	    <img src="img/chevron-down-black.svg" class = "chevron hidden-chevron unselectable">     
+	</div>
+<div id = "portfolio">
+	<div id ="portfolio-wrapper">
+		<div id = "portfolio-title"> 
+			My Portfolio
+		</div>
+
+		<div class="project-box">
+			<p class = "project-title">Project 1</p>
+			<img class = "project-image" src="img/temp-image.jpg">
+			<p class="project-text"> 
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim commodo cursus. Suspendisse ullamcorper nunc facilisis, interdum neque non, pharetra tellus. Fusce vitae vulputate purus.
+
+			</p>
+		</div>
+		<div class="project-box">
+			<p class = "project-title">Project 2</p>
+			<img class = "project-image" src="img/temp-image.jpg">
+			<p class="project-text"> 
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim commodo cursus. Suspendisse ullamcorper nunc facilisis, interdum neque non, pharetra tellus. Fusce vitae vulputate purus.
+
+			</p>
+		</div>
+		<div class="project-box">
+			<p class = "project-title">Project 3</p>
+			<img class = "project-image" src="img/temp-image.jpg">
+			<p class="project-text"> 
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim commodo cursus. Suspendisse ullamcorper nunc facilisis, interdum neque non, pharetra tellus. Fusce vitae vulputate purus.
+
+			</p>
+		</div>
+	</div>
+</div>
+<div id = "about">
+	<div id = "about-wrapper">
+		<div id = "about-title"> About Me</div> <div class="flex-break"></div>
+		<div id="about-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim commodo cursus. Suspendisse ullamcorper nunc facilisis, interdum neque non, pharetra tellus. Fusce vitae vulputate purus. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim commodo cursus. Suspendisse ullamcorper nunc facilisis, interdum neque non, pharetra tellus. Fusce vitae vulputate purus. </div>
+	</div>
+</div>
+
+<div id = "contact">
+	<div id="contact-wrapper">
+		
+	</div>
+</div>
+</body>
+</html>
