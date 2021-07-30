@@ -258,6 +258,10 @@ content:  url("img/Background-Phones.jpg");
 	color: #efae48;
 	font-size:  46px;
 }
+
+.main-title > struct{
+	padding-left: 160px;
+}
 }
 
 /* Main page text for smaller desktops*/
@@ -323,7 +327,16 @@ content:  url("img/Background-Phones.jpg");
 	color: #efae48;
 	font-size:  33px;
 }
+
+#chevron-link{
+	display: none;
 }
+.chevron{
+	display: none;
+}
+
+}
+
 
 @keyframes animation {
 	24% {
@@ -420,7 +433,7 @@ content:  url("img/Background-Phones.jpg");
 	color: white;
 	text-decoration: none;
 	margin-top: 104px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	/*border-bottom: 3px solid #efae48;*/
 }
 
@@ -444,7 +457,7 @@ content:  url("img/Background-Phones.jpg");
 	min-height: 30vh;
 	height: auto;
 	background-color: #282923;
-	margin: 10px;
+	margin: 20px 10px;
 	border: 3px solid #efae48;
 	border-radius: 15px;
 
@@ -491,6 +504,7 @@ content:  url("img/Background-Phones.jpg");
 	overflow: hidden;
 	text-overflow: ellipsis;
 	padding: 5px;
+	padding-bottom: 15px;
 }
 
 /*For phones*/
@@ -501,9 +515,13 @@ content:  url("img/Background-Phones.jpg");
 	.project-text{
 		font-size: 20px;
 	}
+
+	.project-box:last-child{
+		margin-bottom: 80px;
+	}
 }
 
-/* For very thin devices */
+/* For very thin phones */
 @media only screen and (max-width: 650px)
 {
 	.project-image{
@@ -556,6 +574,22 @@ content:  url("img/Background-Phones.jpg");
 	border-left: 3px solid #282923 ;
 
 }
+
+/*For phones*/
+@media only screen and (max-width: 861px){
+	#about-title{
+		font-size: 48px;
+		padding-top: 100px;
+	}
+	#about-text{
+		font-size: 20px;
+		margin-top: 60px;
+	}
+
+}
+
+
+
 
 .flex-break{
 	height: 0;
