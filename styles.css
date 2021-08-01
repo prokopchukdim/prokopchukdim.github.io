@@ -464,7 +464,6 @@ content:  url("img/Background-Phones.jpg");
 */
 .project-box{
 	width: 95%;
-	min-height: 30vh;
 	height: auto;
 	/*background-color: #282923;*/
 	margin: 20px 10px;
