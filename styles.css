@@ -408,7 +408,7 @@ content:  url("img/Background-Phones.jpg");
 
 #portfolio{
 	/*background-image: linear-gradient(to right, #282923, #3e4036, #282923);*/
-	background-image: linear-gradient(to right, #282923, #33342c, #282923);
+	background-image: -webkit-linear-gradient(right, #282923, #33342c, #282923);
 	width: auto;
 }
 
@@ -558,7 +558,7 @@ content:  url("img/Background-Phones.jpg");
 	min-height: 100vh;
 	width: auto;
 	z-index: 0;
-	background-image: linear-gradient(32deg, #a86631 10%, #d8dd57 90%);
+	background-image: -webkit-linear-gradient(32deg, #a86631 10%, #d8dd57 90%);
 }
 
 #about-wrapper{
