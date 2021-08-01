@@ -466,16 +466,19 @@ content:  url("img/Background-Phones.jpg");
 	width: 95%;
 	min-height: 30vh;
 	height: auto;
-	background-color: #282923;
+	/*background-color: #282923;*/
 	margin: 20px 10px;
-	border: 3px solid #efae48;
-	border-radius: 15px;
+	border-top: 3px solid #efae48;
+	border-bottom: 3px solid #efae48;
+	/*border-radius: 15px;*/
 
 	transition: padding-left 0.3s, padding-right 0.3s, border 0.3s;
 }
 
 .project-box:hover{
-	border: 3px solid #ecbc72;
+	/*border: 3px solid #ecbc72;*/
+	border-top: 3px solid #ecbc72;
+	border-bottom: 3px solid #ecbc72;
 	padding-left: 1.5%;
 	padding-right: 1.5%;
 
