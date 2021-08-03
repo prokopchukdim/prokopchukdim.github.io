@@ -406,6 +406,7 @@ content:  url("img/Background-Phones.jpg");
    user-select: none;
 }
 
+
 #portfolio{
 	/*background-image: linear-gradient(to right, #282923, #3e4036, #282923);*/
 	background-image: -webkit-linear-gradient(right, #282923, #33342c, #282923);
@@ -463,59 +464,66 @@ content:  url("img/Background-Phones.jpg");
 }}
 */
 .project-box{
-	width: 95%;
+	/*width: 95%;*/
+	width: 80%;
 	height: auto;
 	/*background-color: #282923;*/
-	margin: 20px 10px;
-	border-top: 3px solid #efae48;
-	border-bottom: 3px solid #efae48;
+	/*margin: 20px 10px;*/
+	margin-bottom: 90px;
+	/*margin-left: 10%;*/
+
+	/*border-top: 3px solid #efae48;
+	border-bottom: 3px solid #efae48;*/
 	/*border-radius: 15px;*/
+	border-left: 3px solid #282923;
+	padding-left: 5%;
+	margin-left: 5%;
 
 	transition: padding-left 0.3s, padding-right 0.3s, border 0.3s;
 }
 
-.project-box:hover{
-	/*border: 3px solid #ecbc72;*/
+/*.project-box:hover{
 	border-top: 3px solid #ecbc72;
 	border-bottom: 3px solid #ecbc72;
 	padding-left: 1.5%;
 	padding-right: 1.5%;
-
-}
+}*/
 
 .project-box:last-child{
 	margin-bottom: 150px;
 }
 
 .project-title{
-	color: white;
+	color: #282923;
 	padding: 10px;
 	margin: 0;
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 40px;
+
+	overflow: hidden;
 }
 
 .project-image{
 	padding: 0;
-	float: left;
+	float: right;
 	margin: 10px;
 	margin-bottom: 30px;
 	/*border: 1px solid #efae48;*/
 	border: 1px solid white;
 	border-radius: 15px;
-	width: 33%;
+	width: 25%;
 }
 
 .project-text{
 	margin: 0;
-	max-height: 20%;
+	/*max-height: 20%;*/
 	font-size: 25px;
 	/*color: white;*/
-	color: #efae48;
+	color: #282923;
 	width: auto;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	padding: 5px;
+	padding: 5px 10px;
 	padding-bottom: 15px;
 }
 
@@ -537,29 +545,29 @@ content:  url("img/Background-Phones.jpg");
 @media only screen and (max-width: 650px)
 {
 	.project-image{
-		width: 90%;
+		width: 70%;
 		text-align: center;
 		margin: 10px auto;
 		display: block;
 		float: none;
 	}
 
-	.project-box{
+	/*.project-box{
 		width: 90%;
 	}
 	.project-text{
 		width: 90%;
 		margin: auto;
-	}
+	}*/
 }
 
 
-#about{
+/*#about{
 	min-height: 100vh;
 	width: auto;
 	z-index: 0;
 	background-image: -webkit-linear-gradient(32deg, #a86631 10%, #d8dd57 90%);
-}
+}*/
 
 #about-wrapper{
 	max-width: 1600px;
@@ -573,13 +581,16 @@ content:  url("img/Background-Phones.jpg");
 	font-size: 84px;
 	padding-top: 200px;
 	padding-left: 15%;
+
+
+	margin-bottom: 90px;
 }
 
 #about-text{
 	width: 70%;
 	color: #282923;
 	font-size: 35px;
-	margin-top: 90px;
+	/*margin-top: 90px;*/
 	margin-bottom: 90px;
 	margin-left: 10%;
 	padding-left: 5%;
@@ -592,10 +603,12 @@ content:  url("img/Background-Phones.jpg");
 	#about-title{
 		font-size: 48px;
 		padding-top: 100px;
+
+		margin-bottom: 60px;
 	}
 	#about-text{
 		font-size: 20px;
-		margin-top: 60px;
+		/*margin-top: 60px;*/
 	}
 
 }
@@ -616,4 +629,27 @@ content:  url("img/Background-Phones.jpg");
 
 #contact-wrapper{
 
+}
+
+
+#main-background{
+	height: 100vh;
+	width: 100%;
+	z-index: -1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: -webkit-linear-gradient(32deg, #a86631 10%, #d8dd57 90%);
+
+}
+
+#main-wrapper{
+	max-width: 1600px;;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.full-page{
+	min-height: 100vh;
 }
