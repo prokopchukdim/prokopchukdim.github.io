@@ -475,6 +475,7 @@ content:  url("img/Background-Phones.jpg");
 	/*border-top: 3px solid #efae48;
 	border-bottom: 3px solid #efae48;*/
 	/*border-radius: 15px;*/
+	border: 1px solid rgba(0, 0, 0, 0);
 	border-left: 3px solid #282923;
 	padding-left: 5%;
 	margin-left: 5%;
@@ -482,12 +483,15 @@ content:  url("img/Background-Phones.jpg");
 	transition: padding-left 0.3s, padding-right 0.3s, border 0.3s;
 }
 
-/*.project-box:hover{
-	border-top: 3px solid #ecbc72;
+.project-box:hover{
+	border-top: 1px solid #282923;
+	border-bottom: 1px solid #282923;
+	border-left: 10px solid #282923;
+	/*border-top: 3px solid #ecbc72;
 	border-bottom: 3px solid #ecbc72;
 	padding-left: 1.5%;
-	padding-right: 1.5%;
-}*/
+	padding-right: 1.5%;*/
+}
 
 .project-box:last-child{
 	margin-bottom: 150px;
