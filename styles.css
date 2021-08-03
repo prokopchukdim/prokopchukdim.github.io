@@ -470,11 +470,14 @@ content:  url("img/Background-Phones.jpg");
 	/*background-color: #282923;*/
 	/*margin: 20px 10px;*/
 	margin-bottom: 90px;
-	margin-left: 10%;
+	/*margin-left: 10%;*/
 
 	/*border-top: 3px solid #efae48;
 	border-bottom: 3px solid #efae48;*/
 	/*border-radius: 15px;*/
+	border-left: 3px solid #282923;
+	padding-left: 5%;
+	margin-left: 5%;
 
 	transition: padding-left 0.3s, padding-right 0.3s, border 0.3s;
 }
@@ -494,19 +497,21 @@ content:  url("img/Background-Phones.jpg");
 	color: #282923;
 	padding: 10px;
 	margin: 0;
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 40px;
+
+	overflow: hidden;
 }
 
 .project-image{
 	padding: 0;
-	float: left;
+	float: right;
 	margin: 10px;
 	margin-bottom: 30px;
 	/*border: 1px solid #efae48;*/
 	border: 1px solid white;
 	border-radius: 15px;
-	width: 33%;
+	width: 25%;
 }
 
 .project-text{
@@ -518,7 +523,7 @@ content:  url("img/Background-Phones.jpg");
 	width: auto;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	padding: 5px;
+	padding: 5px 10px;
 	padding-bottom: 15px;
 }
 
@@ -540,20 +545,20 @@ content:  url("img/Background-Phones.jpg");
 @media only screen and (max-width: 650px)
 {
 	.project-image{
-		width: 90%;
+		width: 70%;
 		text-align: center;
 		margin: 10px auto;
 		display: block;
 		float: none;
 	}
 
-	.project-box{
+	/*.project-box{
 		width: 90%;
 	}
 	.project-text{
 		width: 90%;
 		margin: auto;
-	}
+	}*/
 }
 
 
