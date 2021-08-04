@@ -163,7 +163,7 @@ transition: background-color 0.3s;
 	padding: 2px;
 	width: auto;
 
-	transition: color 0.2s;
+	transition: color 0.2s ease;
 }
 .navbar-home-button{
 	position: absolute;
@@ -214,8 +214,18 @@ background-color: #282923;
 }
 
 
-/*Background Image for Desktops*/
-@media only screen and (min-width: 861px){
+/*Background Image*/
+.main-image{
+	position: absolute;
+	max-height: 100%;
+	max-width: 100%;
+	right: 0px;
+	bottom: 0px;
+	z-index: -10;
+	/*content:  url("img/Background-Phones.jpg")*/
+}
+
+/*@media only screen and (min-width: 861px){
 .main-image{
 position: absolute;
 height: 100%;
@@ -224,9 +234,9 @@ right: 0px;
 z-index: -10;
 content:  url("img/Background.jpg");
 }}
-
+*/
 /*Background Image for Phones */
-@media only screen and (max-width: 860px){
+/*@media only screen and (max-width: 860px){
 .main-image{
 position: absolute;
 height: auto;
@@ -234,107 +244,138 @@ width: 100%;
 bottom: 0px;
 z-index: -10;
 content:  url("img/Background-Phones.jpg");
-}}
+}}*/
 
+.front-button{
+	text-decoration: none;
+	font-size: 35px;
+	color: white;
+	text-align: center;
+
+	display: inline-block;
+	height: fit-content;
+	width: 42.5%;
+	padding: 15px 2.5%;
+	/*margin: auto;*/
+	/*margin: 0px 1%;*/
+	/*background-color: #efae48;*/
+	border: 1px solid #efae48;
+
+	transition: all 0.3s ease;
+}
+
+.front-button:hover{
+	background-color: #efae48;
+
+}
+
+.title-text{
+		font-size: 84px; 
+		color: white;
+		text-align: left;
+		text-decoration: none;
+
+		position: absolute;
+	}
 
 /*Main page text for normal desktops */
 @media only screen and (min-width: 1301px) {
+	.main-title{
+		left: 7%;
+		top:  20%;
+	}
 
-.title-text{
-	font-size: 84px; 
-	color: white;
-	text-align: left;
-	text-decoration: none;
+	.title-text > .sub-title{
+		color: #efae48;
+		font-size:  46px;
+	}
 
-	position: absolute;
-}
-
-.main-title{
-	left: 7%;
-	top:  20%;
-}
-
-.title-text > .sub-title{
-	color: #efae48;
-	font-size:  46px;
-}
-
-.main-title > struct{
-	padding-left: 160px;
-}
+	.main-title > struct{
+		padding-left: 160px;
+	}
+	#front-button-1{
+		margin-right: 2%;
+	}
+	#front-button-2{
+		margin-left: 2%;
+	}
+	.front-button{
+		margin-top: 60px;
+	}
 }
 
 /* Main page text for smaller desktops*/
 @media only screen and (max-width: 1300px) and (min-width: 861px) {
 
-.title-text{
-	font-size: 60px; 
-	color: white;
-	text-align: left;
-	text-decoration: none;
+	.title-text{
+		font-size: 60px; 
+	}
 
-	position: absolute;
-}
+	.main-title{
+		left: 7%;
+		top:  20%;
+		visibility: hidden;
+	}
 
-.main-title{
-	left: 7%;
-	top:  20%;
-	visibility: hidden;
-}
+	.main-title:before{
+		content: "Dmitriy Prokopchuk";
+		visibility: visible;
+		position: absolute;
+		top: 0;
+		left: -4px;
+	}
 
-.main-title:before{
-	content: "Dmitriy Prokopchuk";
-	visibility: visible;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.title-text > .sub-title{
-	color: #efae48;
-	font-size:  33px;
-	visibility: visible;
-}
+	.title-text > .sub-title{
+		color: #efae48;
+		font-size:  33px;
+		visibility: visible;
+	}
+	.front-button{
+		visibility: visible;
+		font-size: 30px;
+		width: 100%;
+		padding: 15px 0;
+	}
 }
 
 /* Main page text for phones*/
 @media only screen and (max-width: 860px) {
 
-.title-text{
-	font-size: 60px; 
-	color: white;
-	text-align: left;
-	text-decoration: none;
+	.title-text{
+		font-size: 60px; 
+	}
 
-	position: absolute;
-}
+	.main-title{
+		visibility: hidden;
+		left: 7%;
+		top:  10%;
+	}
+	.main-title:before{
+		content: "Dmitriy Prokopchuk";
+		visibility: visible;
+		position: absolute;
+		top: 0;
+		left: -4px;
+	}
 
-.main-title{
-	visibility: hidden;
-	left: 7%;
-	top:  10%;
-}
-.main-title:before{
-	content: "Dmitriy Prokopchuk";
-	visibility: visible;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
+	.title-text > .sub-title{
+		visibility: visible;
+		color: #efae48;
+		font-size:  33px;
+	}
 
-.title-text > .sub-title{
-	visibility: visible;
-	color: #efae48;
-	font-size:  33px;
-}
-
-#chevron-link{
-	display: none;
-}
-.chevron{
-	display: none;
-}
-
+	#chevron-link{
+		display: none;
+	}
+	.chevron{
+		display: none;
+	}
+	.front-button{
+		visibility: visible;
+		font-size: 30px;
+		width: 100%;
+		padding: 15px 0;
+	}
 }
 
 
@@ -475,18 +516,23 @@ content:  url("img/Background-Phones.jpg");
 	/*border-top: 3px solid #efae48;
 	border-bottom: 3px solid #efae48;*/
 	/*border-radius: 15px;*/
-	border: 1px solid rgba(0, 0, 0, 0);
+	/*border: 1px solid rgba(0, 0, 0, 0);*/
 	border-left: 3px solid #282923;
 	padding-left: 5%;
 	margin-left: 5%;
 
-	transition: padding-left 0.3s, padding-right 0.3s, border 0.3s;
+	/*background: -webkit-linear-gradient(left, rgba(40,41,35,70), rgba(40,41,35,0) 5%);*/
+	background-image: none;
+	transition: /*padding-left 0.3s, padding-right 0.3s,*/ border 0.3s;
 }
 
 .project-box:hover{
-	border-top: 1px solid #282923;
-	border-bottom: 1px solid #282923;
+	/*border-top: 1px solid #282923;
+	border-bottom: 1px solid #282923;*/
 	border-left: 10px solid #282923;
+	
+	/*background: -webkit-linear-gradient(left, rgba(40,41,35,70), rgba(40,41,35,0) 5%);*/
+	
 	/*border-top: 3px solid #ecbc72;
 	border-bottom: 3px solid #ecbc72;
 	padding-left: 1.5%;
@@ -600,6 +646,11 @@ content:  url("img/Background-Phones.jpg");
 	padding-left: 5%;
 	border-left: 3px solid #282923 ;
 
+	transition: border 0.3s;
+}
+
+#about-text:hover{
+	border-left: 10px solid #282923;
 }
 
 /*For phones*/
