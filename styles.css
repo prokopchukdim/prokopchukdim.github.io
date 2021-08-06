@@ -283,11 +283,11 @@ content:  url("img/Background-Phones.jpg");
 	background-color: #a77931;
 }
 
-.hidden-button{
+/*.hidden-button{
 	width: 100%;
 	height: 100%;
 	background-color: black;
-}
+}*/
 /*.front-button:before{
 	position: absolute;
 	top: 0;
@@ -593,7 +593,7 @@ content:  url("img/Background-Phones.jpg");
 	padding: 0;
 	float: right;
 	margin: 10px;
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 	/*border: 1px solid #efae48;*/
 	border: 1px solid white;
 	border-radius: 15px;
@@ -602,19 +602,58 @@ content:  url("img/Background-Phones.jpg");
 
 .project-text{
 	margin: 0;
-	/*max-height: 20%;*/
 	font-size: 25px;
-	/*color: white;*/
 	color: #282923;
 	width: auto;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	padding: 5px 10px;
-	padding-bottom: 15px;
+	/*padding-bottom: 15px;*/
 }
 
-/*For phones*/
-@media only screen and (max-width: 861px){
+.project-button{
+	z-index: 0;
+	text-decoration: none;
+	font-size: 25px;
+	color: #282923;
+	text-align: center;
+
+	position: relative;
+	display: inline-block;
+	height: fit-content;
+	width: 42.5%;
+	padding: 15px 2.5%;
+	margin: 10px 0 10px 0;
+	border: 1px solid #282923;
+
+	transition: all 0.3s ease;
+}
+
+.project-button:hover{
+	z-index: 1 !important;
+	background-color: #efae48;
+	border: 1px solid #efae48;
+
+}
+
+.project-button:active{
+	z-index: 1 !important;
+	background-color: #a77931;
+	border: 1px solid #efae48;
+}
+
+.project-button-wrapper{
+	padding: 0 10px;
+	overflow-wrap: none;
+}
+.project-button-divider{
+	display: inline-block;
+	height: 100%;
+	width: 1%;
+}
+
+/*For smaller screens*/
+@media only screen and (max-width: 1090px){
 	.project-image{
 		width: 40%;
 	}
@@ -627,8 +666,8 @@ content:  url("img/Background-Phones.jpg");
 	}
 }
 
-/* For very thin phones */
-@media only screen and (max-width: 650px)
+/* For thin phones */
+@media only screen and (max-width: 715px)
 {
 	.project-image{
 		width: 70%;
@@ -716,9 +755,6 @@ content:  url("img/Background-Phones.jpg");
 	}
 
 }
-
-
-
 
 .flex-break{
 	height: 0;
