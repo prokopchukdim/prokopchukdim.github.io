@@ -574,6 +574,7 @@ content:  url("img/Background-Phones.jpg");
 	transform: perspective(1000px) translateZ(20px);
 }
 
+
 .project-box:last-child{
 	margin-bottom: 150px;
 }
@@ -668,7 +669,7 @@ content:  url("img/Background-Phones.jpg");
 	padding-left: 15%;
 
 
-	margin-bottom: 90px;
+	margin-bottom: 75px;
 }
 
 #about-text{
@@ -678,13 +679,26 @@ content:  url("img/Background-Phones.jpg");
 	/*margin-top: 90px;*/
 	margin-bottom: 90px;
 	margin-left: 10%;
-	padding-left: 5%;
-	border-left: 3px solid #282923 ;
+	padding: 15px 5% 15px 5%;
 
-	transition: all 0.3s;
+	padding-left: 5%;
+
+
+	transition: all 0.3s ease;
 }
 
-#about-text:hover{
+.text-border{
+	border-left: 3px solid #282923;
+	transform: perspective(1000px);
+}
+
+/*#about-text:hover{
+	border-left: 10px solid #282923;
+}*/
+
+.card-hover-manual{
+	box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px;
+	transform: perspective(1000px) translateZ(20px);
 	border-left: 10px solid #282923;
 }
 
@@ -694,7 +708,7 @@ content:  url("img/Background-Phones.jpg");
 		font-size: 48px;
 		padding-top: 100px;
 
-		margin-bottom: 60px;
+		margin-bottom: 45px;
 	}
 	#about-text{
 		font-size: 20px;

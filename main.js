@@ -1,6 +1,11 @@
-// JQuery Functions
+var menuOpen = false;
+
+// Event listeners for once the window is loaded
 $(document).ready(function(){
   
+  //About Me scroll-sensitive card control
+  createAboutObserver();
+
   //Navbar transparency control
   $(window).on("scroll", function () {
     if($(this).scrollTop() > 64 || menuOpen) {
@@ -45,7 +50,6 @@ $(document).ready(function(){
   });
 });
 
-var menuOpen = false;
 function menuOpenClick(){
    //Menu close controls. Toggle transparency if needed
   if(menuOpen){
@@ -69,4 +73,27 @@ function navClick(){
   if(menuOpen){
     menuOpenClick();
   }
+}
+
+//Intersection Observer Code for About Me page
+function createAboutObserver() {
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
+  }
+
+  var aboutObserver = new IntersectionObserver(handleAbout, observerOptions);
+  aboutObserver.observe(document.getElementById("about-text"));
+}
+
+function handleAbout(entries, observer){
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      $("#about-text").addClass("card-hover-manual");
+    }
+    else{
+      $("#about-text").removeClass("card-hover-manual");
+    }
+  })
 }
