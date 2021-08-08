@@ -1,10 +1,7 @@
 var menuOpen = false;
 
-// Event listeners for once the window is loaded
+// Event listeners for once the document is ready
 $(document).ready(function(){
-  
-  //Fix project card button location
-  projectCardReposition();
 
   //About Me scroll-sensitive card control
   createAboutObserver();
@@ -55,6 +52,12 @@ $(document).ready(function(){
     }
 
   });
+});
+
+//Code to fire once the whole window is fully loaded
+$(window).on("load", function(){
+  //Fix project card button location
+  projectCardReposition();
 });
 
 function menuOpenClick(){
