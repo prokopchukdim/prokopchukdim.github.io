@@ -767,10 +767,6 @@ content:  url("img/Background-Phones.jpg");
 	background-color: #282923;
 }
 
-#contact-wrapper{
-
-}
-
 
 #main-background{
 	height: 100vh;
@@ -783,7 +779,7 @@ content:  url("img/Background-Phones.jpg");
 
 }
 
-#main-wrapper{
+.main-wrapper{
 	max-width: 1600px;;
 	margin: auto;
 	display: flex;
@@ -792,4 +788,37 @@ content:  url("img/Background-Phones.jpg");
 
 .full-page{
 	min-height: 100vh;
+}
+
+.contact-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+#contact-title{
+	font-size: 40px;
+	color: white;
+
+	padding: 30px;
+	/*padding-bottom: 30px;*/
+	margin: 0;
+}
+
+.contact-content{
+	color: white;
+	font-size: 20px;
+
+	padding: 10px;
+	padding-bottom: 30px;
+	margin: 0;
+}
+
+.contact-content>span{
+	color: #efae48;
+}
+
+@media only screen and (max-width: 860px) {
+	.contact-content{
+		font-size: 15px;
+	}
 }
