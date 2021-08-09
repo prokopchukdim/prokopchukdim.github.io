@@ -528,18 +528,11 @@ content:  url("img/Background-Phones.jpg");
 }
 
 .project-box{
-	/*width: 95%;*/
 	width: 80%;
 	height: auto;
-	/*background-color: #282923;*/
-	/*margin: 20px 10px;*/
 	margin-bottom: 90px;
-	/*margin-left: 10%;*/
 
-	/*border-top: 3px solid #efae48;
-	border-bottom: 3px solid #efae48;*/
-	/*border-radius: 15px;*/
-	/*border: 1px solid rgba(0, 0, 0, 0);*/
+	
 	border-left: 3px solid #282923;
 	padding-left: 5%;
 	margin-left: 5%;
@@ -550,28 +543,21 @@ content:  url("img/Background-Phones.jpg");
 	transition: all 0.3s;
 }
 
-.project-box:hover{
-	/*border-top: 1px solid #282923;
-	border-bottom: 1px solid #282923;*/
-	border-left: 10px solid #282923;
-
-
-	/*background: -webkit-linear-gradient(left, rgba(40,41,35,70), rgba(40,41,35,0) 5%);*/
-	
-	/*border-top: 3px solid #ecbc72;
-	border-bottom: 3px solid #ecbc72;
-	padding-left: 1.5%;
-	padding-right: 1.5%;*/
-}
 
 .card-hover{
 	transform: perspective(1000px);
 	transition: all 0.3s ease;
 }
 
-.card-hover:hover{
+/*Ensure card hover mechanics only availale on non-phone screens*/
+@media only screen and (min-width: 860px) {
+	.project-box:hover{
+	border-left: 10px solid #282923;
+	}
+	.card-hover:hover{
 	box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px;
 	transform: perspective(1000px) translateZ(20px);
+	}
 }
 
 
