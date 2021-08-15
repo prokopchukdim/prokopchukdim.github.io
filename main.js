@@ -1,10 +1,29 @@
 var menuOpen = false;
+var mobileThreshold = 843;
 
 // Event listeners for once the document is ready
 $(document).ready(function(){
 
-  //About Me scroll-sensitive card control
-  createAboutObserver();
+  //Scroll-sensitive animation control
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.6
+  }
+  var projectObserver = new IntersectionObserver(handleProject, observerOptions);
+  
+  observerOptions["threshold"] = 1.0;
+  var aboutObserver = new IntersectionObserver(handleAbout, observerOptions);
+  aboutObserver.observe(document.getElementById("about-text"));
+
+  //Improves animation timing for mobile screens
+  if ($(window).width() <= mobileThreshold){
+    var projectCards = $(".project-box").get();
+    projectCards.forEach(card => {
+      projectObserver.observe(card);
+    })
+  }
+
 
   //Navbar transparency control
   $(window).on("scroll", function () {
@@ -19,11 +38,24 @@ $(document).ready(function(){
   });
 
   //Fix glitches with menu display upon resize due to use of "slideUp" and "slideDown"
-  var mobileThreshold = 843;
   $(window).on("resize", function(){
 
     //Fix project card button location
     projectCardReposition();
+
+    //Recreates scroll-sensitive animation control to account for switch between desktop and mobile
+    var projectCards = $(".project-box").get();
+    if ($(window).width() >= mobileThreshold){
+      projectCards.forEach(card => {
+        card.classList.remove("card-hover-manual");
+      })
+      projectObserver.disconnect();
+    }
+    else{
+      projectCards.forEach(card => {
+        projectObserver.observe(card);
+      })
+    }
 
     if(menuOpen && $(this).width() > mobileThreshold){
       if($(window).scrollTop() < 64){
@@ -85,17 +117,10 @@ function navClick(){
   }
 }
 
-//Intersection Observer Code for About Me page
-function createAboutObserver() {
-  var observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0
-  }
-
-  var aboutObserver = new IntersectionObserver(handleAbout, observerOptions);
-  aboutObserver.observe(document.getElementById("about-text"));
-}
+// //Intersection Observer Code for About Me page
+// function createObservers() {
+  
+// }
 
 function handleAbout(entries, observer){
   entries.forEach(entry => {
@@ -108,12 +133,23 @@ function handleAbout(entries, observer){
   })
 }
 
+//Handles project cards upon scroll for mobiles
+function handleProject(entries, observer){
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add("card-hover-manual");
+    }
+    else{
+      entry.target.classList.remove("card-hover-manual");
+    }
+  })
+}
+
 //Repositions buttons under project cards to make better use of the space. Called upon load and viewport resize.
 function projectCardReposition(){
   var buttons = new Array();
   $(".project-button").each(function(){
     buttons.push($(this));
-    
   });
 
   buttons.forEach(button => {
