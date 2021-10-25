@@ -88,8 +88,13 @@ $(document).ready(function(){
 
 //Code to fire once the whole window is fully loaded
 $(window).on("load", function(){
-  //Fix project card button location
+  //Fix project card button location. Has to be called twice, once with delay, to fix a weird display bug.
   projectCardReposition();
+
+  setTimeout(function() {
+    projectCardReposition();
+}, 100);
+
 });
 
 function menuOpenClick(){
