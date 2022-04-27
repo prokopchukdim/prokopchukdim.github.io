@@ -416,7 +416,20 @@ background-color: #282923;
 	width: 1%;
 }
 
-
+.project-tags{
+	color: #efae48;
+	padding: 5px 10px;
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 20px;
+}
+.project-tags span{
+	padding: 3px 5px;
+	margin-right: 5px;
+	background-color: #282923;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
 
 #about-wrapper{
 	max-width: 1600px;
@@ -438,7 +451,7 @@ background-color: #282923;
 #about-text{
 	width: 80%;
 	color: #282923;
-	font-size: 35px;
+	font-size: 25px;
 	/*margin-top: 90px;*/
 	margin: auto;
 	margin-bottom: 90px;
@@ -518,6 +531,7 @@ background-color: #282923;
 	padding: 10px;
 	padding-bottom: 30px;
 	margin: 0;
+	max-width: 80%;
 }
 
 .contact-content>span{
@@ -550,7 +564,7 @@ background-color: #282923;
 		visibility: hidden;
 	}
 
-	#about-text{
+	#about-text, .project-text{
 		font-size: 20px;
 	}
 
@@ -591,9 +605,6 @@ background-color: #282923;
 	.project-image{
 		width: 40%;
 	}
-	.project-text{
-		font-size: 20px;
-	}
 
 	.project-box:last-child{
 		margin-bottom: 80px;
@@ -605,17 +616,13 @@ background-color: #282923;
 /*For phones*/
 @media only screen and (max-width: 860px) {
 	.contact-content{
-		font-size: 15px;
+		font-size: 16px;
 	}
 	.about-title{
 		font-size: 48px;
 		padding-top: 100px;
 
 		margin-bottom: 45px;
-	}
-	#about-text{
-		font-size: 20px;
-		/*margin-top: 60px;*/
 	}
 
 	.title-text{
@@ -699,6 +706,14 @@ background-color: #282923;
 		margin: 10px auto;
 		display: block;
 		float: none;
+	}
+
+	.project-title{
+		font-size: 30px;
+	}
+
+	.project-tags{
+		font-size: 16px;
 	}
 }
 
