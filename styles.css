@@ -534,8 +534,9 @@ background-color: #282923;
 	max-width: 80%;
 }
 
-.contact-content>span{
+.contact-content a{
 	color: #efae48;
+	
 }
 
 /*Ensure card hover mechanics only availale on non-phone screens*/
@@ -643,7 +644,7 @@ background-color: #282923;
 	}
 
 	.title-text > .sub-title{
-		font-size:  33px;
+		font-size:  30px;
 	}
 
 	#chevron-link{
@@ -654,7 +655,7 @@ background-color: #282923;
 	}
 	.front-button{
 		visibility: visible;
-		font-size: 30px;
+		font-size: 20px;
 		width: 100%;
 		padding: 15px 0;
 	}
@@ -710,6 +711,10 @@ background-color: #282923;
 
 	.project-title{
 		font-size: 30px;
+	}
+
+	.project-button{
+		font-size: 20px;
 	}
 
 	.project-tags{
