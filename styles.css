@@ -10,32 +10,24 @@ body {
 }
 
 /* Navbar for non-phone screens */
-@media only screen and (min-width:  861px)
-{
 .navbar {
+	right: 0;
+	left: 0;
+	top: 0;
 
-right: 0;
-left: 0;
-top: 0;
-
-position: fixed;
-/*
-max-width: 1600px;
-margin: 0 auto;
-*/
-padding: 0px 12px; 
+	position: fixed;
+	padding: 0px 12px; 
 
 
-min-height: 40px;
-z-index: 100;
-transition: background-color 0.3s;
-width: auto;
-
-
+	min-height: 40px;
+	z-index: 100;
+	transition: background-color 0.3s;
+	width: auto;
 }
 
 .navbar-container {
-	display: block;
+	display: flex;
+	flex-flow: row;
 	height: auto;
 	list-style-type: none;
 	overflow: hidden;
@@ -48,11 +40,13 @@ width: auto;
 }
 
 .navbar-button{
+	flex-grow: 1;
 	box-sizing: border-box;
 	float:  left;
 	border-right: 1px solid white;
-	width: 33.3%;
+	/* width: 33.3%; */
 	min-height: 50px;
+	
 }
 .navbar-button:last-child{
 	border-right: none;
@@ -65,81 +59,18 @@ width: auto;
 	display: block;
 	padding: 10px 0px; 
 	
-	font-size: 21px;
+	font-size: 20px;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 
-	transition: color 0.2s, font-size 0.2s;
+	transition: all 0.2s;
+	transform: perspective(1000px);
 }
-
 
 .navbar-menu-button {
 	display: none;
-}}
-
-/* Navbar for phones */
-@media only screen and (max-width: 860px) {
-
-.navbar {
-
-right: 0;
-left: 0;
-top: 0;
-
-position: fixed;
-
-padding: 0px 12px;
-min-height: 40px;
-z-index: 100;
-transition: background-color 0.3s;
 }
-
-.navbar-container {
-	display: none;
-	height: auto;
-	list-style-type: none;
-	overflow: hidden;
-	margin: 0;
-	width: 100%;
-	padding: 0;
-}
-
-.navbar-button{
-	padding: 0px 0px;
-	box-sizing: border-box;
-	width: 80%;
-	min-height: 50px;
-	margin: 0px auto;
-	text-align: center;
-}
-
-
-.navbar-button>a{
-	display: inline-block;
-	position: relative;
-	padding: 15px 10px; 
-	font-size: 21px;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-
-	width: 40%;
-	border-bottom: 1px solid white;
-
-	transition: color 0.2s, font-size 0.2s; 
-}
-.navbar-button:last-child > a{
-	border-bottom: none;
-}
-.navbar-menu-button {
-	display: inline-block;
-	float: right;
-	padding: 14px;
-	padding-right: 1%;
-	margin: 0;
-	height: 44px;
-}}
 
 .menu-icon{
 	color: white;
@@ -188,9 +119,10 @@ background-color: transparent;
 	background-color: #282923;
 }
 
-.navbar-button :hover {
+.navbar-button>a:hover {
 	color: #efae48;
-	font-size: 23px;
+	transform: perspective(1000px) translate3d(0px, 0px, 70px);
+	/* font-size: 23px; */
 }
 
 .hidden{
@@ -258,114 +190,36 @@ background-color: #282923;
 
 
 .title-text{
-		font-size: 84px; 
-		color: white;
-		text-align: left;
-		text-decoration: none;
+	font-size: 84px; 
+	color: white;
+	text-align: left;
+	text-decoration: none;
 
-		position: absolute;
-	}
-
-/*Main page text for normal desktops */
-@media only screen and (min-width: 1301px) {
-	.main-title{
-		left: 7%;
-		top:  20%;
-	}
-
-	.title-text > .sub-title{
-		color: #efae48;
-		font-size:  46px;
-	}
-
-	.main-title > struct{
-		padding-left: 160px;
-	}
-	#front-button-1{
-		margin-right: 2%;
-	}
-	#front-button-2{
-		margin-left: 2%;
-	}
-	.front-button{
-		margin-top: 60px;
-	}
+	position: absolute;
 }
 
-/* Main page text for smaller desktops*/
-@media only screen and (max-width: 1300px) and (min-width: 861px) {
-
-	.title-text{
-		font-size: 60px; 
-	}
-
-	.main-title{
-		left: 7%;
-		top:  20%;
-		visibility: hidden;
-	}
-
-	.main-title:before{
-		content: "Dmitriy Prokopchuk";
-		visibility: visible;
-		position: absolute;
-		top: 0;
-		left: -4px;
-	}
-
-	.title-text > .sub-title{
-		color: #efae48;
-		font-size:  33px;
-		visibility: visible;
-	}
-	.front-button{
-		visibility: visible;
-		font-size: 30px;
-		width: 100%;
-		padding: 15px 0;
-	}
+.main-title{
+	left: 7%;
+	top:  20%;
 }
 
-/* Main page text for phones*/
-@media only screen and (max-width: 860px) {
-
-	.title-text{
-		font-size: 60px; 
-	}
-
-	.main-title{
-		visibility: hidden;
-		left: 7%;
-		top:  10%;
-	}
-	.main-title:before{
-		content: "Dmitriy Prokopchuk";
-		visibility: visible;
-		position: absolute;
-		top: 0;
-		left: -4px;
-	}
-
-	.title-text > .sub-title{
-		visibility: visible;
-		color: #efae48;
-		font-size:  33px;
-	}
-
-	#chevron-link{
-		display: none;
-	}
-	.chevron{
-		display: none;
-	}
-	.front-button{
-		visibility: visible;
-		font-size: 30px;
-		width: 100%;
-		padding: 15px 0;
-	}
+.title-text > .sub-title{
+	color: #efae48;
+	font-size:  46px;
 }
 
+.main-title > struct{
+	padding-left: 160px;
+}
+#front-button-1{
+	margin-right: 2%;
+}
+#front-button-2{
+	margin-left: 2%;
+}
+.front-button{
+	margin-top: 60px;
+}
 
 @keyframes animation {
 	24% {
@@ -402,13 +256,15 @@ background-color: #282923;
 	transition: bottom 0.2s ease, color 0.2s ease;
 }
 
-.chevron:hover{
-	bottom: 15px;	
-}
-
-.chevron:active{
-	bottom: 5px;
-	color: #a77931;
+@media screen and (min-width: 860px){
+	.chevron:hover{
+		bottom: 15px;	
+	}
+	
+	.chevron:active{
+		bottom: 5px;
+		color: #a77931;
+	}	
 }
 
 #chevron-link{
@@ -456,36 +312,23 @@ background-color: #282923;
 	text-decoration: none;
 	margin-top: 104px;
 	margin-bottom: 20px;
+	font-size: 84px; 
 }
 
-@media only screen and (min-width: 1301px) {
-	#portfolio-title{
-		font-size: 84px; 
-	}
-}
 
-@media only screen and (max-width: 1300px) /*and (min-width: 861px)*/ {
-	#portfolio-title{
-		font-size: 60px; 
-	}
-}
-
-@media only screen and (max-width: 860px)
-{
-	#portfolio-title{	
-		font-size: 48px;
-	}
-}
 
 .project-box{
 	width: 80%;
+	box-sizing: border-box;
 	height: auto;
+	margin: auto;
 	margin-bottom: 90px;
 
 	
 	border-left: 3px solid #282923;
 	padding-left: 5%;
-	margin-left: 5%;
+	padding-right: 5%;
+	/* margin-left: 5%; */
 
 	/*background: -webkit-linear-gradient(left, rgba(40,41,35,70), rgba(40,41,35,0) 5%);*/
 	background-image: none;
@@ -499,16 +342,7 @@ background-color: #282923;
 	transition: all 0.3s ease;
 }
 
-/*Ensure card hover mechanics only availale on non-phone screens*/
-@media only screen and (min-width: 860px) {
-	.project-box:hover{
-	border-left: 10px solid #282923;
-	}
-	.card-hover:hover{
-	box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px;
-	transform: perspective(1000px) translateZ(20px);
-	}
-}
+
 
 
 .project-box:last-child{
@@ -557,7 +391,7 @@ background-color: #282923;
 	height: fit-content;
 	width: 42.5%;
 	padding: 15px 2.5%;
-	margin: 10px 0 10px 0;
+	margin-bottom: 10px;
 	border: 1px solid #282923;
 
 	transition: all 0.3s ease;
@@ -586,32 +420,20 @@ background-color: #282923;
 	width: 1%;
 }
 
-/*For smaller screens*/
-@media only screen and (max-width: 1090px){
-	.project-image{
-		width: 40%;
-	}
-	.project-text{
-		font-size: 20px;
-	}
-
-	.project-box:last-child{
-		margin-bottom: 80px;
-	}
+.project-tags{
+	color: #efae48;
+	padding: 5px 10px;
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 20px;
 }
-
-/* For thin phones */
-@media only screen and (max-width: 715px)
-{
-	.project-image{
-		width: 70%;
-		text-align: center;
-		margin: 10px auto;
-		display: block;
-		float: none;
-	}
+.project-tags span{
+	padding: 3px 5px;
+	margin-right: 5px;
+	background-color: #282923;
+	border-radius: 10px;
+	margin-bottom: 5px;
 }
-
 
 #about-wrapper{
 	max-width: 1600px;
@@ -620,7 +442,7 @@ background-color: #282923;
 	flex-wrap: wrap;
 }
 
-#about-title{
+.about-title{
 	color: #282923;
 	font-size: 84px;
 	padding-top: 200px;
@@ -631,12 +453,13 @@ background-color: #282923;
 }
 
 #about-text{
-	width: 70%;
+	width: 80%;
 	color: #282923;
-	font-size: 35px;
+	font-size: 25px;
 	/*margin-top: 90px;*/
+	margin: auto;
 	margin-bottom: 90px;
-	margin-left: 10%;
+	/* margin-left: 10%; */
 	padding: 15px 5% 15px 5%;
 
 	padding-left: 5%;
@@ -648,27 +471,13 @@ background-color: #282923;
 .text-border{
 	border-left: 3px solid #282923;
 	transform: perspective(1000px);
+	box-sizing: border-box;
 }
 
 .card-hover-manual{
 	box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px;
 	transform: perspective(1000px) translateZ(20px);
 	border-left: 10px solid #282923;
-}
-
-/*For phones*/
-@media only screen and (max-width: 861px){
-	#about-title{
-		font-size: 48px;
-		padding-top: 100px;
-
-		margin-bottom: 45px;
-	}
-	#about-text{
-		font-size: 20px;
-		/*margin-top: 60px;*/
-	}
-
 }
 
 .flex-break{
@@ -726,14 +535,209 @@ background-color: #282923;
 	padding: 10px;
 	padding-bottom: 30px;
 	margin: 0;
+	max-width: 80%;
 }
 
-.contact-content>span{
+.contact-content a{
 	color: #efae48;
+	
 }
 
+/*Ensure card hover mechanics only availale on non-phone screens*/
+@media only screen and (min-width: 860px) {
+	.project-box:hover{
+	border-left: 10px solid #282923;
+	}
+	.card-hover:hover{
+	box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px;
+	transform: perspective(1000px) translateZ(20px);
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	#portfolio-title{
+		font-size: 60px; 
+	}
+
+	.title-text, .about-title{
+		font-size: 60px; 
+	}
+
+	.main-title{
+		left: 7%;
+		top:  20%;
+		visibility: hidden;
+	}
+
+	#about-text, .project-text{
+		font-size: 20px;
+	}
+
+	.main-title:before{
+		content: "Dmitriy Prokopchuk";
+		visibility: visible;
+		position: absolute;
+		top: 0;
+		left: -4px;
+	}
+
+	.title-text > .sub-title{
+		color: #efae48;
+		font-size:  33px;
+		visibility: visible;
+	}
+	.front-button{
+		visibility: visible;
+		font-size: 30px;
+		width: 100%;
+		padding: 15px 0;
+		margin-top: 0;
+	}
+	.main-title > struct{
+		padding-left: 0;
+	}
+	#front-button-1{
+		margin-right: 0;
+	}
+	#front-button-2{
+		margin-left: 0;
+	}
+}
+
+
+/*For smaller screens*/
+@media only screen and (max-width: 1090px){
+	.project-image{
+		width: 40%;
+	}
+
+	.project-box:last-child{
+		margin-bottom: 80px;
+	}
+
+
+}
+
+/*For phones*/
 @media only screen and (max-width: 860px) {
 	.contact-content{
-		font-size: 15px;
+		font-size: 16px;
+	}
+	.about-title{
+		font-size: 48px;
+		padding-top: 100px;
+
+		margin-bottom: 45px;
+	}
+
+	.title-text{
+		font-size: 60px; 
+	}
+
+	.main-title{
+		visibility: hidden;
+		left: 7%;
+		top:  10%;
+	}
+	.main-title:before{
+		content: "Dmitriy Prokopchuk";
+		visibility: visible;
+		position: absolute;
+		top: 0;
+		left: -4px;
+	}
+
+	.title-text > .sub-title{
+		font-size:  30px;
+	}
+
+	/* #chevron-link{
+		display: none;
+	}
+	.chevron{
+		display: none;
+	} */
+	.front-button{
+		visibility: visible;
+		font-size: 20px;
+		width: 100%;
+		padding: 15px 0;
+	}
+
+	#portfolio-title{	
+		font-size: 48px;
+	}
+
+	.navbar-container {
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar-button{
+		padding: 0px 0px;
+		width: 32%;
+		margin: 0px auto;
+		text-align: center;
+		float:none;
+		border-right: none;
+		border-bottom: 1px solid white; 
+	}
+
+
+	.navbar-button>a{
+		display: inline-block;
+		padding: 15px 10px; 
+
+		width: 100%;
+		box-sizing: border-box;
+		
+	}
+	.navbar-button:last-child {
+		border-bottom: none;
+	}
+	.navbar-menu-button {
+		display: inline-block;
+		float: right;
+		padding: 14px;
+		padding-right: 1%;
+		margin: 0;
+		height: 44px;
+	}
+
+	.project-image{
+		width: 70%;
+		text-align: center;
+		margin: 10px auto;
+		display: block;
+		float: none;
+	}
+
+	.project-title{
+		font-size: 30px;
+	}
+
+	.project-button{
+		font-size: 20px;
+	}
+
+	.project-tags{
+		font-size: 16px;
+	}
+}
+
+
+
+/* For very small devices */
+@media only screen and (max-width: 500px)
+{
+	.title-text, .about-title{
+		font-size: 40px; 
+	}
+	.title-text > .sub-title{
+		font-size:  20px;
+	}
+	.front-button, .project-text, .navbar-button>a, #about-text, .project-button{
+		font-size: 16px;
 	}
 }

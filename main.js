@@ -1,5 +1,5 @@
 var menuOpen = false;
-var mobileThreshold = 843;
+var mobileThreshold = 860;
 
 // Event listeners for once the document is ready
 $(document).ready(function(){
@@ -12,7 +12,7 @@ $(document).ready(function(){
   }
   var projectObserver = new IntersectionObserver(handleProject, observerOptions);
   
-  observerOptions["threshold"] = 1.0;
+  observerOptions["threshold"] = 0.6;
   var aboutObserver = new IntersectionObserver(handleAbout, observerOptions);
   aboutObserver.observe(document.getElementById("about-text"));
 
@@ -67,7 +67,7 @@ $(document).ready(function(){
       $(".menu-icon").removeClass("menu-icon-selected")
     }
     if(!menuOpen && $(".navbar-menu-button").css("display") == "none" ){ //$(this).width() > mobileThreshold){
-      $(".navbar-container").css('display','block');
+      $(".navbar-container").css('display','flex');
     }
     if(!menuOpen && $(".navbar-menu-button").css("display") != "none" ){  //$(this).width() < mobileThreshold){
       $(".navbar-container").css('display','none');
@@ -170,7 +170,7 @@ function projectCardReposition(){
     var ttbCombined = titleHeight + textHeight + buttonHeight + paddingOffset;
 
     var textWidth = parseFloat(card.find(".project-text").css("width"));
-    card.find(".project-button-wrapper").css("width",textWidth);
+    
 
     if(textWidth <= 300 && $(window).width() <= 699){
       button.css("width", "95%");
@@ -193,6 +193,7 @@ function projectCardReposition(){
         requiredMargin = 15;
       }
     }
-    button.css("margin-top", requiredMargin);
+    // button.css("margin-top", requiredMargin);
+    card.find(".project-button-wrapper").css("margin-top", requiredMargin);
   })
 }
