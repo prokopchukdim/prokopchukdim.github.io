@@ -21,6 +21,9 @@ body {
 
 	min-height: 40px;
 	z-index: 100;
+	transform: translate3d(0px, 0px, 100px); /*For Safari*/
+
+
 	transition: background-color 0.3s;
 	width: auto;
 }
@@ -739,5 +742,9 @@ background-color: #282923;
 	}
 	.front-button, .project-text, .navbar-button>a, #about-text, .project-button{
 		font-size: 16px;
+	}
+	.chevron{
+		width: 64px;
+		margin-left: -32px;
 	}
 }
