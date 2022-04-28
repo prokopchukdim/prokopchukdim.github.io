@@ -67,7 +67,7 @@ $(document).ready(function(){
       $(".menu-icon").removeClass("menu-icon-selected")
     }
     if(!menuOpen && $(".navbar-menu-button").css("display") == "none" ){ //$(this).width() > mobileThreshold){
-      $(".navbar-container").css('display','block');
+      $(".navbar-container").css('display','flex');
     }
     if(!menuOpen && $(".navbar-menu-button").css("display") != "none" ){  //$(this).width() < mobileThreshold){
       $(".navbar-container").css('display','none');

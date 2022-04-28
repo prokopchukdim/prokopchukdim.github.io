@@ -26,7 +26,8 @@ body {
 }
 
 .navbar-container {
-	display: block;
+	display: flex;
+	flex-flow: row;
 	height: auto;
 	list-style-type: none;
 	overflow: hidden;
@@ -39,10 +40,11 @@ body {
 }
 
 .navbar-button{
+	flex-grow: 1;
 	box-sizing: border-box;
 	float:  left;
 	border-right: 1px solid white;
-	width: 33.3%;
+	/* width: 33.3%; */
 	min-height: 50px;
 	
 }
@@ -254,13 +256,15 @@ background-color: #282923;
 	transition: bottom 0.2s ease, color 0.2s ease;
 }
 
-.chevron:hover{
-	bottom: 15px;	
-}
-
-.chevron:active{
-	bottom: 5px;
-	color: #a77931;
+@media screen and (min-width: 860px){
+	.chevron:hover{
+		bottom: 15px;	
+	}
+	
+	.chevron:active{
+		bottom: 5px;
+		color: #a77931;
+	}	
 }
 
 #chevron-link{
@@ -647,12 +651,12 @@ background-color: #282923;
 		font-size:  30px;
 	}
 
-	#chevron-link{
+	/* #chevron-link{
 		display: none;
 	}
 	.chevron{
 		display: none;
-	}
+	} */
 	.front-button{
 		visibility: visible;
 		font-size: 20px;
