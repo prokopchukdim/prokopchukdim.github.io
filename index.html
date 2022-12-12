@@ -6,20 +6,22 @@
 
 	<title>Dmitriy Prokopchuk</title>
 
-	<!-- Code to import desired Roboto font -->
+	<!-- Roboto font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 	<!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-	<!-- My JS Code -->
+	
+	<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script src="main.js" defer></script>
 
-	<!-- Code to import feather icons -->
+	<!-- Feather icons -->
 	<script src="https://unpkg.com/feather-icons"></script>
 
-	<!-- My stylesheet -->
+	
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -63,27 +65,29 @@
 
 <!-- Front Page -->
 <div class = "front-page">
-		<img class = "main-image unselectable" src="img/Background.jpg"> </img>
-
-		<div class = "main-title title-text">
-			Dmitriy <br> <struct> Prokopchuk</struct>
-			<div class="sub-title">
-				Software Engineer <struct class="sub-title coding-animation">_</struct>
-			</div>
-
-			<a class="front-button button-hoverable" id = "front-button-1" href="https://github.com/prokopchukdim" target="_blank"> GitHub </a><a class="front-button button-hoverable" id="front-button-2" href="https://www.linkedin.com/in/dmitriy-prokopchuk-082a05213/" target="_blank">LinkedIn</a>
+	
+	<!-- particles.js container --> 
+	<div id="particles-js"></div> 
+	
+	<div class = "main-title title-text">
+		Dmitriy <br> <struct> Prokopchuk</struct>
+		<div class="sub-title">
+			Software Engineer <struct class="sub-title coding-animation">_</struct>
 		</div>
-		
-		<!-- <img src="img/chevron-down.svg" class = "chevron"></img> -->
-		<a href="#about" id = "chevron-link">
-			<i data-feather="chevron-down" class="chevron unselectable"></i>
-			<script>
-		      feather.replace()
-		    </script> 
-	    </a>
-	    
-	    <img src="img/chevron-down-black.svg" class = "chevron hidden-chevron unselectable">     
+
+		<a class="front-button button-hoverable" id = "front-button-1" href="https://github.com/prokopchukdim" target="_blank"> GitHub </a><a class="front-button button-hoverable" id="front-button-2" href="https://www.linkedin.com/in/dmitriy-prokopchuk-082a05213/" target="_blank">LinkedIn</a>
 	</div>
+	
+	<!-- <img src="img/chevron-down.svg" class = "chevron"></img> -->
+	<a href="#about" id = "chevron-link">
+		<i data-feather="chevron-down" class="chevron unselectable"></i>
+		<script>
+			feather.replace()
+		</script> 
+	</a>
+	
+	<img src="img/chevron-down-black.svg" class = "chevron hidden-chevron unselectable">     
+</div>
 
 
 <!-- Main Content -->
