@@ -335,8 +335,8 @@ background-color: #282923;
 
 
 .project-box{
-	width: 80%;
-	box-sizing: border-box;
+	width: 70%;
+	box-sizing: content-box;
 	height: auto;
 	margin: auto;
 	margin-bottom: 90px;
@@ -437,6 +437,7 @@ background-color: #282923;
 	width: 1%;
 }
 
+
 .project-tags{
 	color: #efae48;
 	padding: 5px 10px;
@@ -468,7 +469,8 @@ background-color: #282923;
 }
 
 #about-text{
-	width: 80%;
+	width: 70%;
+	box-sizing: content-box;
 	color: #282923;
 	font-size: 25px;
 	margin: auto;
@@ -476,6 +478,17 @@ background-color: #282923;
 	padding-left: 5%;
 
 	transition: all 0.3s ease;
+}
+
+.link-text {
+	color: #282923;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.link-text:hover {
+	/*color: white;*/
+	color: #efae48;
 }
 
 .text-border{
@@ -551,6 +564,15 @@ background-color: #282923;
 .contact-content a{
 	color: #efae48;
 	
+}
+
+.about-tag-padding{ 
+	padding: 5px 0 0 0;
+}
+
+.about-subtitle{ 
+	padding: 0 0;
+	font-size: 35px;
 }
 
 /*Ensure card hover mechanics only availale on non-phone screens*/

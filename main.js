@@ -1,5 +1,7 @@
 var menuOpen = false;
 var mobileThreshold = 860;
+var observedAboutCounter = 0;
+var observedAboutMin = 0;
 
 // Event listeners for once the document is ready
 $(document).ready(function(){
@@ -126,9 +128,18 @@ $(document).ready(function(){
   }
   var projectObserver = new IntersectionObserver(handleProject, observerOptions);
   
-  observerOptions["threshold"] = 0.6;
+  //Keep About box observed as long as any of its subtitles are observed
+  observerOptions["threshold"] = 0.0;
   var aboutObserver = new IntersectionObserver(handleAbout, observerOptions);
-  aboutObserver.observe(document.getElementById("about-text"));
+
+  var aboutTexts = $('.about-subtitle').get();
+  aboutTexts.forEach(title => {
+    aboutObserver.observe(title);
+    observedAboutMin -= 1;
+  });
+  observedAboutCounter = observedAboutMin;
+
+  // aboutObserver.observe(document.getElementById("about-text"));
 
   //Improves animation timing for mobile screens
   if ($(window).width() <= mobileThreshold){
@@ -237,19 +248,26 @@ function navClick(){
 }
 
 // //Intersection Observer Code for About Me page
-// function createObservers() {
-  
-// }
 
 function handleAbout(entries, observer){
+
   entries.forEach(entry => {
     if (entry.isIntersecting){
-      $("#about-text").addClass("card-hover-manual");
+      observedAboutCounter += 1;
     }
-    else{
-      $("#about-text").removeClass("card-hover-manual");
+    else {
+      if (observedAboutCounter > observedAboutMin) {
+        observedAboutCounter -= 1;
+      }
     }
-  })
+  });
+
+  if (observedAboutCounter > observedAboutMin) {
+    $("#about-text").addClass("card-hover-manual");
+  }
+  else {
+    $("#about-text").removeClass("card-hover-manual");
+  }
 }
 
 //Handles project cards upon scroll for mobiles
